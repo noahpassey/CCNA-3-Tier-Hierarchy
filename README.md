@@ -1,5 +1,6 @@
-# Access Layer 
 <img width="676" height="339" alt="Screenshot 2026-08-20 145555" src="https://github.com/user-attachments/assets/0d6d83d8-58f7-47b7-9998-efde2bd9c250" />
+
+# Access Layer 
 
 I started from the beginning with creating subnetworks (segmenting at layer-3) starting with the private Class B 172.16.0.0 /12. My first network for the VLAN 10 "PC's" needed an address range of 200 hosts so I chose the /24 CIDR notation which has 253 hosts in total. My second network is VLAN 20 "WAPs" and it needed 100 hosts. The next available network address is 172.16.1.0 and I used the /25 CIDR. VLAN 30 needed 50 hosts for "Server's" on the network 172.16.1.128. VLAN 40 needed 15 hosts for "Management" purposes and is also the native untagged VLAN on trunk ports. I used the 172.16.1.192 /27 with 30 hosts in total.
 
