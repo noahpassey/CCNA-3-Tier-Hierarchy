@@ -3,4 +3,4 @@
 
 ## Distribution Layer
 
-### Core Layer
+## Core Layer
