@@ -19,6 +19,16 @@ In this example we see the layer 2 switch identifies that the G0/0 port is apart
 
 ### Etherchannel / Trunk Ports
 
+Each access-layer switch (2960_1 and 2960_2) has two port-channels for the given interfaces. If the logical port-channel goes down or the physical cable itself on one group of ports, it has a redundant link going to the standby default gateway for the given VLAN. If a distribution MLS goes down (3560-x as an example), the access-layer switch still has a way to get to other networks/internet through the second MLS default gateway (3750-x). There are 5 channel groups in total in the topology all using the open standard LACP versus the closed Cisco PAGP. The duplex type, speed of each port, and allowed VLANs / Native VLAN must match in order to form an etherchannel. This was configured to load balance between the links in a group and to have an additional path to the distribution layer if a single pair is shutdown or fails. In the interface port-channel configurations I set the switchport to encapsulate dot1q, mode trunk, allowed VLAN of 10,20,30,40, and the native VLAN 40 for management traffic that is untagged without 802.1q field. 
+
+In this example the access-layer switch receives an ethernet frame from an access port configured for VLAN 10 destined for the active VLAN 10 SVI on the distribution MLS. It will look at its MAC address table at the mapping of the destination MAC / port ID, realizes the destination is through its port-channel group 2 interface, then encapsulates the 802.1q with the VLAN 10 ID information and sends it out of either G1/0 or G1/1 dependent on the addressing of the ip packet / ethernet frame. 
+
+<img width="676" height="65" alt="Screenshot 2026-08-20 210404" src="https://github.com/user-attachments/assets/081b8c54-0cd2-4cd8-b7a6-0973bf8afd2c" />
+<img width="431" height="154" alt="Screenshot 2026-08-20 210301" src="https://github.com/user-attachments/assets/35888e69-cd1e-43b9-998a-552c0b26bdc2" />
+
+
+
+
 
 
 
