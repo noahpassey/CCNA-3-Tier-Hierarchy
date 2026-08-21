@@ -8,7 +8,13 @@ I started from the beginning with creating subnetworks (segmenting at layer-3) s
 
 This is a Dual-Stack network which consists of IPV4 and IPV6 processes at once. I started the IPV6 networks with the prefix 2000:db8:1234:VLAN Number:: /64. I used the 4th hextet to represent the VLAN number of each subnet. I converted the binary of 10,20,30,40 into hexadecimal A,14,1E,28.
 
-2960_1 was segmented into two separate broadcast domains, VLAN 10 and 20. The purpose for this is when an ethernet header destination mac is all F's or an ipv4 header has a broadcast ip address whether for finding a neighbor or next hops mac address using ARP or finding the DHCP server with DORA messages, 
+The purpose of the four VLAN's is to segment each physical switch (2960_1 and 2960_2) into 2 separate broadcast domains. Similar to how we segment at layer 3 for the reasoning of separate address ranges; and if there is a broadcast (255.255.255.255) in the destination ip address field, it will go to all logical ip addresses configured on end devices and intermediary devices in that given broadcast domain because every possible ip address fits within the broadcast, which in turn will lead the devices to de-encapsulate the ethernet frame up the stack for itself. If multiple subnetworks connecting to a layer 2 switch had all their ports configured with VLAN 10, then an address range for one department of the building would be getting traffic from another department because the ethernet frames are freely transiting into the VLAN 10 port and flooding out all the other ports which includes different layer 3 networks. The switches logic is basic, looking at the all F's destination MAC and realizing that in binary that is all 1's matching all possible layer 2 addresses. an ARP broadcast message to a default gateway to know the address of its physical port, a DHCP broadcast discover and request messages for finding the DHCP and receiving an ip address are two examples of traffic using broadcasts in their respected layer 2 and/or layer 3 headers. 
+
+
+In this example we see the layer 2 device
+<img width="210" height="253" alt="Screenshot 2026-08-20 175608" src="https://github.com/user-attachments/assets/db2eefcd-e29e-4ca2-963b-3f4fea60e16a" />
+<img width="301" height="91" alt="Screenshot 2026-08-20 175722" src="https://github.com/user-attachments/assets/fb83cb67-1737-4211-a1ad-537faf94bc85" />
+
 
 
 
