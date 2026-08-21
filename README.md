@@ -14,7 +14,8 @@ The purpose of the four VLAN's is to segment each physical switch (2960_1 and 29
 In this example we see the layer 2 switch identifies that the G0/0 port is apart of the VLAN 10 broadcast domain, therefore if a PC as an example sends a broadcast ethernet frame to the switchport, the switch will flood to only trunks or access ports that allow the VLAN 10 802.1q tagging, mitigating traffic congestion of 4 networks. 
 
 <img width="210" height="253" alt="Screenshot 2026-08-20 175608" src="https://github.com/user-attachments/assets/db2eefcd-e29e-4ca2-963b-3f4fea60e16a" />
-<img width="301" height="91" alt="Screenshot 2026-08-20 175722" src="https://github.com/user-attachments/assets/fb83cb67-1737-4211-a1ad-537faf94bc85" />
+<img width="370" height="202" alt="Screenshot 2026-08-20 193441" src="https://github.com/user-attachments/assets/d014b105-7bf8-4de7-a89b-1dfa26e7e283" />
+
 
 
 
