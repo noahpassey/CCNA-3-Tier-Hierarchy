@@ -26,9 +26,10 @@ In this example the access-layer switch (2960_1) transits an ethernet frame from
 <img width="676" height="65" alt="Screenshot 2026-08-20 210404" src="https://github.com/user-attachments/assets/081b8c54-0cd2-4cd8-b7a6-0973bf8afd2c" />
 <img width="431" height="154" alt="Screenshot 2026-08-20 210301" src="https://github.com/user-attachments/assets/35888e69-cd1e-43b9-998a-552c0b26bdc2" />
 <img width="492" height="119" alt="Screenshot 2026-08-20 214828" src="https://github.com/user-attachments/assets/9f249391-80e1-41c9-a78a-5b368fa65664" />
+
 ### PVSTP
 
-I wanted each VLAN to have its own instance of STP, meaning different port states / root bridge for each VLAN
+I wanted each VLAN to have its own instance of STP, meaning different port states / root bridge for each VLAN.
 
 
 
