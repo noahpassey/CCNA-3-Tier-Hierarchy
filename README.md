@@ -37,8 +37,8 @@ In this example we are going to discuss the logic behind STP and how our topolog
 
 <img width="635" height="363" alt="Screenshot 2026-08-20 233338" src="https://github.com/user-attachments/assets/97978601-7359-47f1-b1fb-12a49b57794c" />
 <img width="636" height="374" alt="Screenshot 2026-08-20 233435" src="https://github.com/user-attachments/assets/824acb58-8d56-4916-954a-2fde67d8609f" />
-<img width="631" height="349" alt="Screenshot 2026-08-20 233647" src="https://github.com/user-attachments/assets/fc450241-d227-4686-8a93-7b674e42231d" />
 <img width="631" height="370" alt="Screenshot 2026-08-20 233556" src="https://github.com/user-attachments/assets/ab077242-296f-4d70-bee3-9f85dc8a0158" />
+<img width="631" height="349" alt="Screenshot 2026-08-20 233647" src="https://github.com/user-attachments/assets/36083ae5-aac8-4f6d-85b0-58c14d99e428" />
 
 
 
